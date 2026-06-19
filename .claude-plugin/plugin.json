@@ -1,0 +1,8 @@
+{
+  "name": "garmin-ai-coach",
+  "version": "0.1.0",
+  "description": "Garmin Connect data access + AI coaching for Claude Code and AI agents. Cloudflare-aware auth (cloudscraper + garminconnect 0.2.38, ~1yr token), daily sync digest, and scheduled coaching. Bundles the 'garmin-connect' skill.",
+  "author": { "name": "MECoban" },
+  "homepage": "https://github.com/MECoban/garmin-ai-coach",
+  "keywords": ["garmin", "garmin-connect", "fitness", "health", "running", "marathon", "cloudflare", "automation", "coaching", "agent"]
+}

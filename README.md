@@ -107,5 +107,21 @@ coaching messages. No server, no extra API cost.
 - Garmin activity data contains **GPS start points (home location)** — keep any
   personal copy private.
 
+## 🤖 Use it as a Claude Code Skill / Plugin (for AI agents)
+
+This repo is also a **Claude Code plugin** with a `garmin-connect` **skill** —
+written so an AI agent can discover it and set up Garmin access end-to-end on its own.
+
+- Skill: [`skills/garmin-connect/SKILL.md`](skills/garmin-connect/SKILL.md)
+- Manifest: [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json)
+
+**Install the skill** (drop it where your agent looks for skills):
+```bash
+mkdir -p ~/.claude/skills
+cp -R skills/garmin-connect ~/.claude/skills/
+```
+Then ask your agent: *"pull my Garmin data"* / *"set up my Garmin coach"* and it
+will follow the skill (the recipe is self-contained for an agent to execute).
+
 ## License
 MIT. Not affiliated with Garmin. Not medical advice.
