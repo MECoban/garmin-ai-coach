@@ -1,0 +1,11 @@
+# ÇALIŞAN Garmin auth reçetesi (2026-06): garth-tabanlı garminconnect + cloudscraper.
+# cloudscraper, Garmin SSO'daki Cloudflare'i programatik geçer. ÖN KOŞUL: 2FA KAPALI
+# (garminconnect 2FA desteklemez). Token ~/.garminconnect (~1 yıl). Bkz. login_garmin.py
+garminconnect==0.2.38
+cloudscraper
+python-dotenv
+pandas
+rich
+fastapi
+uvicorn[standard]
+jinja2
