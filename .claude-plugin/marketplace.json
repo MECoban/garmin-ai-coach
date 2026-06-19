@@ -1,0 +1,20 @@
+{
+  "name": "mecoban-tools",
+  "owner": {
+    "name": "MECoban",
+    "url": "https://github.com/MECoban"
+  },
+  "metadata": {
+    "description": "Open-source Claude Code plugins & skills by MECoban. Built for humans and AI agents.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "garmin-ai-coach",
+      "source": "./",
+      "description": "Access Garmin Connect health/fitness data and build AI coaching — Cloudflare-aware auth (cloudscraper + garminconnect 0.2.38, ~1yr token), daily sync, scheduled coaching routines. Bundles the 'garmin-connect' skill.",
+      "version": "0.1.0",
+      "keywords": ["garmin", "garmin-connect", "fitness", "health", "running", "cloudflare", "automation", "coaching", "ai-agent", "skill"]
+    }
+  ]
+}

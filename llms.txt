@@ -1,0 +1,24 @@
+# Garmin AI Coach
+
+> Self-hosted, fully automated Garmin Connect data access + AI coaching for Claude Code and AI agents. Solves Garmin's Cloudflare-blocked SSO (cloudscraper + garminconnect 0.2.38, token lasts ~1 year), syncs health/fitness data daily, and delivers scheduled AI coaching. Open-source (MIT), built for both humans and agents.
+
+## Start here
+- [README](README.md): overview + setup
+- [AGENTS.md](AGENTS.md): instructions for AI agents (use this if you are an agent)
+- [garmin-connect skill](skills/garmin-connect/SKILL.md): the working recipe, executable end-to-end by an agent
+
+## The core recipe (auth past Cloudflare)
+- Use `garminconnect==0.2.38` + `cloudscraper`; inject `client.garth.sess = cloudscraper.create_scraper()` before `client.login()`.
+- Garmin Two-Step Verification must be OFF. Token cached at `~/.garminconnect` (~1 year).
+
+## Scripts & automation
+- [scripts/login_garmin.py](scripts/login_garmin.py): one-time token
+- [scripts/daily_sync.py](scripts/daily_sync.py): daily fetch → digest + notification
+- [ROUTINES.md](ROUTINES.md): scheduled AI coaching push (Claude Code Routines)
+
+## Install as a Claude Code plugin
+- `/plugin marketplace add MECoban/garmin-ai-coach`
+- `/plugin install garmin-ai-coach@mecoban-tools`
+
+## Notes
+Personal use of your own data. Not affiliated with Garmin. Not medical advice.

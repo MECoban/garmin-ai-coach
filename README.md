@@ -115,7 +115,13 @@ written so an AI agent can discover it and set up Garmin access end-to-end on it
 - Skill: [`skills/garmin-connect/SKILL.md`](skills/garmin-connect/SKILL.md)
 - Manifest: [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json)
 
-**Install the skill** (drop it where your agent looks for skills):
+**Install as a Claude Code plugin** (recommended):
+```
+/plugin marketplace add MECoban/garmin-ai-coach
+/plugin install garmin-ai-coach@mecoban-tools
+```
+
+**Or install just the skill** (drop it where your agent looks for skills):
 ```bash
 mkdir -p ~/.claude/skills
 cp -R skills/garmin-connect ~/.claude/skills/
